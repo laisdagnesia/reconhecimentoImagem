@@ -1,8 +1,11 @@
 import cv2
 import face_recognition as fr
 
-imgBillie = fr.load_image_file('Billie.jpg')
-imgBillieTeste = fr.load_image_file('billie2.jpg')
+#imgBillie = fr.load_image_file('Billie.jpg')
+#imgBillieTeste = fr.load_image_file('billie2.jpg')
+imgBillieTeste = fr.load_image_file('taylor.jpg')
+imgBillie = fr.load_image_file('lais.jpeg')
+#imgBillieTeste = fr.load_image_file('desconhecido.jpg')
 
 #Transforma cor da imagem em RGB
 imgBillie = cv2.cvtColor(imgBillie, cv2.COLOR_BGR2RGB)
@@ -12,6 +15,8 @@ imgBillieTeste = cv2.cvtColor(imgBillieTeste, cv2.COLOR_BGR2RGB)
 faceLocBillie = fr.face_locations(imgBillie)[0]
 cv2.rectangle(imgBillie,(faceLocBillie[3], faceLocBillie[0]), (faceLocBillie[1], faceLocBillie[2]), (0, 255, 0),2)
 #print(faceLocBillie)
+faceLocBillieTeste = fr.face_locations(imgBillieTeste)[0]
+cv2.rectangle(imgBillieTeste,(faceLocBillieTeste[3], faceLocBillieTeste[0]), (faceLocBillieTeste[1], faceLocBillieTeste[2]), (0, 255, 0),2)
 
 #Extrai as 128 medidas do rosto da imagem
 encodeBillie = fr.face_encodings(imgBillie)[0]
