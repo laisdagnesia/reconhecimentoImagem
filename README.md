@@ -1,3 +1,3 @@
-# reconhecimentoImagem
+#reconhecimentoImagem
 
-Comparacao de Imagens feita com IA
+Comparacao de Imagens feita com a biblioteca face_recognition do Python.
